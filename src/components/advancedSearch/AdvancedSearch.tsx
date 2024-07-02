@@ -10,6 +10,7 @@ import { useStyles } from './AdvancedSearchStyle';
 import Button from '@material-ui/core/Button';
 import SearchIcon from '@material-ui/icons/Search';
 import Alert from '@material-ui/lab/Alert';
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
 interface SearchProps {
   handleSearch: Function
@@ -62,10 +63,10 @@ export default (props : SearchProps) => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={classes.form}>
     <MuiPickersUtilsProvider utils={DateFnsUtils}>
       <Grid container spacing={3} direction='row-reverse'>
-        <Grid item xs={12}>
+        <Grid item style={{display:'flex',}} justifyContent='center' alignItems='center' xs={12}>
         <DateTimePicker
             className={classes.datePicker}
             margin='normal'
@@ -79,6 +80,7 @@ export default (props : SearchProps) => {
             }}
             disableFuture            
         />
+        <ArrowForwardIcon />
         <DateTimePicker
             className={classes.datePicker}
             margin='normal'

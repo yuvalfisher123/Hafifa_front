@@ -17,4 +17,10 @@ export const useStyles = makeStyles({
     button: {
       boxShadow: '15px 15px 15px #303030',
     },
+    form: {
+      background: '#484848',
+      borderRadius: 15,
+      height: '25vh',
+      width: '55vw'
+    }
   });
