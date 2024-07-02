@@ -14,4 +14,7 @@ export const useStyles = makeStyles({
       border: '5px',
       borderColor: '#8c8c8c',
     },
+    button: {
+      boxShadow: '15px 15px 15px #303030',
+    },
   });

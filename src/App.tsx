@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import AdvancedSearch from './AdvancedSearch'
+import AdvancedSearch from './components/advancedSearch/AdvancedSearch'
 import { ThemeProvider, createTheme } from '@material-ui/core/styles';
 
 const theme = createTheme({
