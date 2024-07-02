@@ -11,8 +11,12 @@ import Button from '@material-ui/core/Button';
 import SearchIcon from '@material-ui/icons/Search';
 import Alert from '@material-ui/lab/Alert';
 
+interface SearchProps {
+  handleSearch: Function
+}
 
-export default () => {
+
+export default (props : SearchProps) => {
     const classes = useStyles();
 
   const [startDate, setStartDate] = React.useState<Date | null>(
@@ -53,7 +57,7 @@ export default () => {
     handleValidationErrorChange(error);
 
     if (!error) {
-      console.log("success");
+      props.handleSearch(startDate, endDate)
     }
   }
 

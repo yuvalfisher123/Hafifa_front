@@ -1,0 +1,15 @@
+.MuiDataGrid-cellCheckbox {
+    background-color: #484848;
+}
+
+.MuiDataGrid-columnsContainer{
+    background-color: #303030;
+}
+
+.MuiDataGrid-footerContainer {
+    background: #484848;
+}
+
+.MuiSvgIcon-fontSizeSmall {
+    color: white;
+}

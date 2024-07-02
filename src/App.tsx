@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import AdvancedSearch from './components/advancedSearch/AdvancedSearch'
+import EventSearch from './components/eventSearch';
 import { ThemeProvider, createTheme } from '@material-ui/core/styles';
 
 const theme = createTheme({
@@ -27,11 +27,9 @@ const theme = createTheme({
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
         <ThemeProvider theme={theme}>
-          <AdvancedSearch />
+          <EventSearch />
         </ThemeProvider>
-      </header>
     </div>
   );
 }
