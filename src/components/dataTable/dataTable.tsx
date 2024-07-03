@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { DataGrid, GridColDef, GridColumnHeaderParams, GridValueFormatterParams, GridValueGetterParams } from '@material-ui/data-grid';
+import { DataGrid, GridColDef, GridColumnHeaderParams, GridFilterInputValue, GridValueFormatterParams, GridValueGetterParams } from '@material-ui/data-grid';
 import moment from 'moment';
 import { useStyles } from './dataTableStyle';
 import './dataTable.css'
+import { Button } from '@material-ui/core';
 
 interface DataTableProps {
     rows: Array<any>
@@ -20,10 +21,11 @@ const columns: GridColDef[] = [
   {
     field: 'lut',
     headerName: 'Last Update Time',
-    width: 200,
+    type: 'dateTime',
+    width: 200, 
     editable: false,
-    valueFormatter: (params?: GridValueFormatterParams) => {
-        return moment(params?.value ? + params.value * 1000 : '').format("DD/MM/YYYY hh:mm A")
+    valueGetter: (params?: GridValueGetterParams) => {
+      return new Date(params?.value ? + params.value * 1000 : '')
     },
     headerClassName: 'header',
     headerAlign: 'left'
