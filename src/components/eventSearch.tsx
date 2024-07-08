@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import AdvancedSearch from './advancedSearch/AdvancedSearch';
 import DataTable from './dataTable/dataTable';
 import api from '../apiCalls/api';
@@ -29,7 +29,8 @@ export default () => {
     return (
         <div style={{ height:'100vh', display:'flex', alignItems: 'center', justifyContent: 'center' }}> 
         { isInSearch && 
-            <AdvancedSearch handleSearch={handleEventSearch} /> ||
+            <AdvancedSearch handleSearch={handleEventSearch} /> }
+        {!isInSearch && 
             <DataTable rows={searchResaults}/>
         }
         </div>
